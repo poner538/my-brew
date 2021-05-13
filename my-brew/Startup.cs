@@ -41,6 +41,7 @@ namespace my_brew
             }
 
             app.UseHttpsRedirection();
+            
             app.UseStaticFiles();
 
             app.UseRouting();
