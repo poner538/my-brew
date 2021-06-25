@@ -3,15 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - my_brew</title>
+    <title>@ViewData["Title"] - Uffes öl</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/stylesheet.css" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">my_brew</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Uffes öl</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,6 +30,35 @@
             </div>
         </nav>
     </header>
+
+    <div class="wrapper_nav">
+				<div class="sidebar_right">
+					<nav>
+						<ul>
+							<li><a asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i></a></li>
+						<h3> Recept </h3>
+						<ul>
+							<li> <a asp-controller="Recipe" asp-action="Lager"> <i class="fas fa-beer"> </i> Lager  </i></a>  </i></li>
+							<li> <a asp-controller="Recipe" asp-action="Lager"> <i class="fas fa-beer"></i> IPA </a> </li>
+						</ul>
+						<h3> Etikett </h3>
+						<ul>
+                            <li> <a asp-controller="Label" asp-action="Examples"><i class="fas fa-tags"> </i> Färdiga exempel </a> </li>
+                            <li> <a asp-controller="Label" asp-action="UpploadOwn"><i class="fas fa-folder"></i> Ladda upp egen </a> </li>
+						</ul>
+						<h3> Boka Tid </h3>
+						<ul>
+							<li> <a class="one" href="ledigatider.html"><i class="far fa-calendar-alt"></i> Lediga tider </a> </li>
+						</ul>
+						<h3> Mitt Konto </h3>
+						<ul>
+							<li> <a class="one" href="sparaderecept.html"><i class="fas fa-concierge-bell"></i> Mina sparade recept</a> </li>
+							<li> <a class="one" href="etiketter.html"><i class="fas fa-tags"></i> Mina etiketter </a> </li>
+							<li> <a class="one" href="gjordebestallningar.html"><i class="fas fa-shopping-cart"></i> Mina gjorde beställningar </a> </li>
+						</ul>
+					</nav>
+				</div>
+			</div>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -37,12 +67,13 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - my_brew - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2021 - Uffes öl - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/scripts.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

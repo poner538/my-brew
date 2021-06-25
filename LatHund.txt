@@ -1,0 +1,12 @@
+********************************** Git ******************************************
+Ladda ner git till Windows här: https://git-scm.com/download/win
+
+Skapa en mapp med namnet "Repos" nånstans. Öppna mappen och högerklicka i den, välj sedan "GIT Bash here".
+
+$ Git config 
+
+**************************** Kör applikationen **********************************
+- Se till att du laddat ner och installerat .Net 5 SDK ( https://dotnet.microsoft.com/download )
+Öppna ett terminalfönster i root-mappen för projectet ( my-brew ) och skriv in 
+
+> dotnet watch run --project my-brew\my-brew.csproj
