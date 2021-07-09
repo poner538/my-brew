@@ -1,4 +1,113 @@
+@import url(stylesheet.css);
 
-form{
+
+
+
+    /* */
+.showcase{
+    background-color: rgb(245, 225, 111);
+    height: 400px;
+    position: relative;
+    color: #fff;
+}
+
+    /* pos for items in form */
+fieldset{ 
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 20px 0 0 5px;
+     
+}
+
+fieldset label{
+    font-size: 14px;
+}
+
+    /* form-card styling, relativ so btn can be absolute */
+.form-card{
+    position: relative;
+    background-color: #fff; 
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px lightslategrey;
+    padding: 10px;
+    margin-top: 45px;
+    height: 400px;
+    max-width: 300px;
     
+}
+
+
+.showcase form input[type='text'],
+.showcase form input[type ='email'],
+.showcase form input[type ='date']
+{
+
+    border: 0;
+    margin: 20px 0 ;
+    border-bottom: 1px solid lightgray;
+    font-size: 16px;
+    width: 100%;
+}
+
+.showcase form input[type='checkbox']{
+    margin: 10px;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+}
+
+.showcase label{
+    font-size: 16px;
+}
+
+
+.showcase h1{
+    text-shadow:1px 1px 1px lightslategrey;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: cursive;
+    
+    
+}
+
+.showcase .grid p{
+    font-size: 1.2em;
+    color: black;
+}
+    /*Specific gridlayout for section "showcase" */
+.showcase .grid {
+    grid-template-columns: 60% 35%;
+    gap: 20px;
+    padding-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.showcase .btn {
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    width: 55px;
+    height: 30px;
+    margin: 20px 0;
+    right: 45%;
+    bottom:0;
+    font-size: 18px;   
+    border-radius: 6px 6px;
+    background-color: rgb(245, 225, 111);
+    box-shadow: 5px 5px 8px lightgray;
+}
+.showcase .btn:hover{
+    font-weight: 700;
+    box-shadow: 10px 10px 10px darkgray;
+
+}
+
+.showcase .btn:focus{
+    transform: scale(0.8);
+    background-color: lightgray;
 }

@@ -2,49 +2,355 @@
 
 <html lang="sv">
 
-<head>
-	<title> lager </title>
-	<script src="https://kit.fontawesome.com/8e94a101ac.js" crossorigin="anonymous"></script>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@900&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
-	<link href="stylesheet.css" type="text/css" rel="stylesheet" />
-	<link href="formCSS.css" type="text/css" rel="stylesheet" />
-	<meta name="description"
-		content=" Gesällprov webbutveckling 1"/> 
-	<meta name="author"
-		content=" Johan Erlesand" />
-	<meta name="generator"
-		content=" Notepad++" />
-	<meta name="keywords"
-		content="Johan,Erlesand,öl,webbutveckling 1, Gesällprov"/>
-	<meta name="robots"
-		content="all"/>
-	<meta charset="utf-8" />	
-	<meta name="viewport" 
-		content="width=device-width, initial-scale=1.0"/>
-
-</head>
 <body>
-	<header>
-		<h1> Lager/IPA öl </h1>
-	</header>
+	<div class="container ">
+		<header>
+			<h1> Öl </h1>
+		</header>	
+	</div>
+		<div class=" container flex">
+			
+		<nav id="nav-beer">
+			<ul>
+				<li><a href="#" id="nav-weis"> Weissbier </a> </li>
+				<li><a href="#" id="nav-lag"> Lager </a> </li>
+				<li><a href="#" id="nav-ipa"> American IPA </a> </li>
+			</ul>
+		</nav>
+		<p>Välj mellan de olika alternativen och tryck sedan "Spara". Gå 
+			sedan vidare till "ledigatider" för att lägga in en beställning.
+		</p>
+		<p>Redan ifyllt är rekommendationer. </p>
+		</div>
 	
 	
-	<form action=" ???.php " class="order_form">
-		<fieldset class="fset_form">
-			<legend>Fyll i för beställning!</legend>
-			<label for="fname">Förnamn: </label>
-			<input type="text" id="fnamn">
-			<lable for="lname">Efternamn: </lable>
-			<input type="text" id="lnamn">
-			<lable for="email">Email: </lable>
-			<input type="email" id="email">
-			<input type="submit" value="submit">
-		</fieldset>
+
+	<section id="sect-lager">
+	<form  id="myForm">
+		<div style="display: none;" class="container weis">
+			<h2>Weissbier</h2>
+			<table>
+				<thead>
+					<th>Malt</th>
+					<th>Mängd(kg)</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<select name="malt" class="malt">
+								<option value="vetemalt">Vetemalt</option>
+								<option value="pilsnermalt">Pilsnermalt</option>
+								<option value="ljus karamellmalt">Ljus karamellmalt</option>
+								<option value="chokladmalt">Chokladmalt</option>
+								<option value="lagermalt">Lagermalt</option>
+								<option value="majsflingor">Majsflingor</option>
+								<option value="caraplis-malt">Caraplis-malt</option>
+								<option value="kornflingor">Kornflingor</option>
+								<option value="munchnermalt">Munchnermalt</option>
+								<option value="pale ale-malt">Pale ale-malt</option>
+							</select>
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="2,7kg" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" placeholder="Pilsnermalt" required>
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="2,3kg">
+						</td>
+					</tr>
+				</tbody>
+				</th>
+				</tr>
+			</table>
+			<table>
+				<thead>
+					<th>Humle</th>
+					<th>Mängd(kg)</th>
+					<th>Koktid(min)</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<select name="humle" class="humle">
+								<option value="hallertauer">Hallertauer Hersbrucker 3,5%</option>
+								<option value="saaz">Saaz 4,2%</option>
+								<option value="citra">Citra 13,8%</option>
+								<option value="simcoe">Simcoe 13%</option>
+								<option value="tettnang">Tettnang 4,5%</option>
+								<option value="challenger">Challenger 7%</option>
+								<option value="east kent golding">East Kent Golding 4,5%</option>
+								<option value="styrian golding">Styrian Golding 4,5%</option>
+								<option value="golding">Golding 5,5%</option>
+							</select>
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="25kg">
+						</td>
+						<td>
+							<input type="text" class="btime" placeholder="maxtid">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" placeholder="Saaz 4,2%">
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="12kg">
+						</td>
+						<td>
+							<input type="text" class="btime" placeholder="maxtid">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<th>Jäst</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<select name="yeast" class="yeast">
+								<option value="wlp060">WLP060</option>
+								<option value="wlp005">WLP005</option>
+								<option value="wlp830">WLP830</option>
+								<option value="wyeast 1187">Wyeast 1187</option>
+								<option value="wyeast 2000">Wyeast 2000</option>
+								<option value="wyeast 3068">Wyeast 3068</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="button" value="Spara" class="this-button" >
+		</div>
+		<div style="display: none;" class="container lager">
+			<h2>Lager</h2>
+			<table>
+				<thead>
+					<th>Malt</th>
+					<th>Mängd(kg)</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<select name="malt" class="malt">
+								<option value="pale ale-malt">Pale ale-malt</option>
+								<option value="pilsnermalt">Pilsnermalt</option>
+								<option value="ljus karamellmalt">Ljus karamellmalt</option>
+								<option value="chokladmalt">Chokladmalt</option>
+								<option value="lagermalt">Lagermalt</option>
+								<option value="majsflingor">Majsflingor</option>
+								<option value="caraplis-malt">Caraplis-malt</option>
+								<option value="kornflingor">Kornflingor</option>
+								<option value="munchnermalt">Munchnermalt</option>
+							</select>
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="2,8kg">
+						</td>
+					</tr>
+					<tr>
+						<td> Majsflingor </td>
+						<td>
+							<input type="text" class="amount" placeholder="0,9kg">
+						</td>
+					</tr>
+				</tbody>
+
+
+			</table>
+			<table>
+				<thead>
+					<th>Humle</th>
+					<th>Mängd(kg)</th>
+					<th>Koktid(min)</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<select name="humle" class="humle">
+								<option value="citra">Citra 13,8%</option>
+								<option value="hallertauer">Hallertauer Hersbrucker 3,5%</option>
+								<option value="simcoe">Simcoe 13%</option>
+								<option value="tettnang">Tettnang 4,5%</option>
+								<option value="challenger">Challenger 7%</option>
+								<option value="east kent golding">East Kent Golding 4,5%</option>
+								<option value="styrian golding">Styrian Golding 4,5%</option>
+								<option value="golding">Golding 5,5%</option>
+
+							</select>
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="20kg">
+						</td>
+						<td>
+							<input type="text" class="btime" placeholder="maxtid">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" placeholder="Hallertauer Hersbrucker 3,5%">
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="10kg">
+						</td>
+						<td>
+							<input type="text" class="btime" placeholder="5min">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<th>Jäst</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<select name="yeast" class="yeast">
+								<option value="wlp060">WLP060</option>
+								<option value="wlp005">WLP005</option>
+								<option value="wlp830">WLP830</option>
+								<option value="wyeast 1187">Wyeast 1187</option>
+								<option value="wyeast 2000">Wyeast 2000</option>
+
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="button" value="Spara" class="this-button">
+		</div>
+		<div style="display: none;" class="container ipa">
+			<h2>American IPA</h2>
+			<table>
+				<thead>
+					<th>Malt</th>
+					<th>Mängd(kg)</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<select name="malt" class="malt">
+								<option value="pilsnermalt">Pilsnermalt</option>
+								<option value="ljus karamellmalt">Ljus karamellmalt</option>
+								<option value="chokladmalt">Chokladmalt</option>
+								<option value="lagermalt">Lagermalt</option>
+								<option value="majsflingor">Majsflingor</option>
+								<option value="caraplis-malt">Caraplis-malt</option>
+								<option value="kornflingor">Kornflingor</option>
+								<option value="munchnermalt">Munchnermalt</option>
+								<option value="pale ale-malt">Pale ale-malt</option>
+							</select>
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="6kg">
+						</td>
+					</tr>
+				</tbody>
+				</th>
+				</tr>
+			</table>
+			<table>
+				<thead>
+					<th>Humle</th>
+					<th>Mängd(gram)</th>
+					<th>Koktid(min)</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<select name="humle" class="humle">
+								<option value="citra">Citra 13,8%</option>
+								<option value="hallertauer">Hallertauer Hersbrucker 3,5%</option>
+								<option value="simcoe">Simcoe 13%</option>
+								<option value="tettnang">Tettnang 4,5%</option>
+								<option value="challenger">Challenger 7%</option>
+								<option value="east kent golding">East Kent Golding 4,5%</option>
+								<option value="styrian golding">Styrian Golding 4,5%</option>
+								<option value="golding">Golding 5,5%</option>
+							</select>
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="29g">
+						</td>
+						<td>
+							<input type="text" class="btime" placeholder="maxtid">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" placeholder="Citra 13,8%">
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="15g">
+						</td>
+						<td>
+							<input type="text" class="btime" placeholder="10min">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" placeholder="Simcoe 13%">
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="15g">
+						</td>
+						<td>
+							<input type="text" class="btime" placeholder="10min">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" placeholder="Citra 13,8%">
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="44g">
+						</td>
+						<td>
+							<input type="text" class="btime" placeholder="0min">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" placeholder="Simcoe 13%">
+						</td>
+						<td>
+							<input type="text" class="amount" placeholder="44g">
+						</td>
+						<td>
+							<input type="text" class="btime" placeholder="0min">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<th>Jäst</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<select name="yeast" class="yeast">
+								<option value="wlp060">WLP060</option>
+								<option value="wlp005">WLP005</option>
+								<option value="wlp830">WLP830</option>
+								<option value="wyeast 1187">Wyeast 1187</option>
+								<option value="wyeast 2000">Wyeast 2000</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="button" value="Spara" class="this-button">
+		</div>
+		
 	</form>
-
-
+	</section>
 
 </body>

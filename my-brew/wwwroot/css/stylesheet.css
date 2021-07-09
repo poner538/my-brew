@@ -1,4 +1,5 @@
-
+@import url(formCSS.css);
+@import url(beerStyle.css);
 
 *{
 	margin: 0;
@@ -87,7 +88,7 @@ header{
 	text-align: center;
 	height: 160px;
 	margin: 5px 5px 5px 5px;
-	background-image: url("Imgaes/barrel.jpg");
+	background-image: url("../Images/barrel.jpg");
 	background-repeat:repeat;
 	background-position: center  ;
 	color: white;
@@ -110,7 +111,7 @@ main {
 	font-family: 'Charm', cursive;
 	font-size: 18px;
 	line-height: 1.4em;
-	width: 400px;
+	/* width: 400px; */
 	margin: 10px auto 10px auto;
 }
 

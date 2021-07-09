@@ -1,0 +1,80 @@
+
+
+    /*  This styles the lager.html */
+
+#nav-beer{
+    font-size: 1.35rem;
+    font-weight: bold;
+    font-family: cursive;
+    text-shadow: 2px 2px 4px #666666;
+    height: 70px;
+    width: 100%;
+}
+#nav-beer ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-beer a{
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+#nav-beer a:hover {
+    border-bottom: 1px lightgray solid;
+}
+.weis{
+    background-color: #b3833b;
+}
+.lager{
+    background-color:  #ffcc00;
+}
+.ipa{
+    background-color:  #d5bc26;
+}
+#sect-lager .container{
+
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px 4px lightgray;
+}
+
+#sect-lager .container td{
+    font-family:sans-serif;
+    font-size: 1rem;
+    border-radius: 4px;    
+    padding: 5px;
+    
+}
+
+#myForm .this-button{
+  margin: 0 50%;
+  width: auto;
+  font-size: 1rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px gray;
+  padding: 5px;
+  background-color: #fff;
+  font-weight: 700;
+}
+#myForm .this-button:hover{
+    transform:scale(1.05);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.74);
+}
+#myForm .this-button:active{
+    transform: translateY(2px);
+}
+#sect-lager .container select,#sect-lager .container input[type="text"] {
+    font-family:sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px gray;
+    border: none;
+    height: 2rem;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 10px;    
+
+}
+
