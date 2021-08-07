@@ -1,4 +1,5 @@
 using Dapper;
+using my_brewLibrary.Models;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -9,21 +10,25 @@ using System.Threading.Tasks;
 
 namespace my_brewLibrary
 {
-    public class DataAccess
+    public class DataAccess : IDataAccess
+
     {   
-        public static List<T> LoadData<T, U>(string sql, U parameters, string connectionString)
+        public async Task<List<T>> LoadData<T, U>(string sql, U parameters, string connectionString)
         {
             using ( IDbConnection connection = new MySqlConnection(connectionString) )
             {
-                List<T> rows = connection.Query<T>(sql, parameters).ToList();
+                var rows = await connection.QueryAsync<T>(sql, parameters);
                 
-                return rows;
+                return rows.ToList();
             }
         }
-    
 
-             
-        public static Task SaveData<T>(string sql, T parameters, string connectionString)
+        internal static List<PersonAccount> LoadData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task SaveData<T>(string sql, T parameters, string connectionString)
         {
             using ( IDbConnection connection = new MySqlConnection(connectionString) )
             {

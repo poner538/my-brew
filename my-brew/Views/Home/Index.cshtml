@@ -1,4 +1,6 @@
-﻿@{
+﻿
+@model PersonAccount
+@{
     ViewData["Title"] = "Home Page";
    
 }
@@ -14,7 +16,7 @@
 				<h1> Österskärs Bryggeri </h1>
 			</header>
 			<main>
-				<h2> Brygg ditt eget öl </h2>
+				<h2> Hej @Html.DisplayTextFor(model => model.Firstname), brygg ditt eget öl </h2>
 				<p> Brygg ditt eget öl med hjälp utav våra standardrecept eller konstruera ditt eget efter dina önskemål.
 					Designa sedan din etikett för att fästas på flaskan före leverans. 
 					Vi pressar småskaligt med batchstorlekar om ca 15 liter.</p>

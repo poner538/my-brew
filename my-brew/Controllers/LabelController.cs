@@ -9,7 +9,7 @@ using my_brew.Models;
 
 namespace my_brew.Controllers
 {
-    public class LabelController : Controller
+    public class LabelController : BaseController
     {
         private readonly ILogger<LabelController> _logger;
 
