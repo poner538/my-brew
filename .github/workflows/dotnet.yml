@@ -18,4 +18,4 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Build with dotnet
-      run: dotnet build --configuration Release --runtime ubuntu.20.04-x64
+      run: dotnet build --configuration Release
