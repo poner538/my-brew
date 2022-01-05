@@ -30,11 +30,11 @@ namespace my_brew.Controllers
         public IActionResult Index()
         {
             
-            string connStr = configuration.GetConnectionString("default");
-            var _account = processor.GetPersonAccounts(connStr).ToList();
+            //string connStr = configuration.GetConnectionString("default");
+            // var _account = processor.GetPersonAccounts(connStr).ToList();
             PersonAccount person = new PersonAccount {
-                Firstname = _account.First().Firstname,
-                Lastname = _account.First().Lastname
+                Firstname = "Tönt",//_account.First().Firstname,
+                Lastname = "Töntsson"//_account.First().Lastname
             };
              return View(person);
             

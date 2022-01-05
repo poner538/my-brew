@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using my_brewLibrary;
 using my_brewLibrary.Bussinesslogic;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace my_brew
 {
@@ -26,9 +27,9 @@ namespace my_brew
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-           
+
             services.AddSingleton<IPersonAccountProcessor, PersonAccountProcessor>();
-            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,12 +44,17 @@ namespace my_brew
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
+                
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+                {
+                    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+                });
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
